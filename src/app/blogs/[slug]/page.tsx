@@ -1,10 +1,48 @@
-import React from 'react'
+// import React from 'react'
+// import { data } from '@/app/data/blog'
+
+// const dynamic = ({ params }: { params: { slug: string } }) => {
+//   const {slug} = params
+//   const blog = data.find((b) => b.slug === slug)
+
+//   return (
+//     <>
+//       <div className="max-w-4xl mx-auto mt-[40px] px-4 sm:px-6 lg:px-8">
+//         <h1 className="text-3xl sm:text-4xl md:text-5xl text-white bg-blue-950 py-3 px-3 font-bold underline mb-4">
+//           {blog?.name}
+//         </h1>
+
+//         {/* Blog Content Section */}
+//         <div className="prose max-w-full mb-8 text-gray-700">
+//           <p>{blog?.content}</p>
+//         </div>
+
+//         {/* Author Section */}
+//         <h2 className="text-lg sm:text-xl md:text-2xl mb-[50px] mt-[20px]">
+//           Written by: <span className="text-blue-950 text-xl sm:text-2xl font-medium underline">{blog?.Author}</span>
+//         </h2>
+//       </div>
+//     </>
+//   )
+// }
+
+// export default dynamic
+import { FC } from 'react';
 import { data } from '@/app/data/blog'
 
-const dynamic = ({ params }: { params: { slug: string } }) => {
-  const blog = data.find((b) => b.slug === params.slug)
+// PageProps type ko define karte hain
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
 
-  return (
+// Blog page component jo params ke sath kaam karega
+const BlogPage: FC<PageProps> = ({ params }) => {
+  const { slug } = params;
+  const blog = data.find((b) => b.slug === slug)
+ 
+    return (
     <>
       <div className="max-w-4xl mx-auto mt-[40px] px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-white bg-blue-950 py-3 px-3 font-bold underline mb-4">
@@ -23,6 +61,7 @@ const dynamic = ({ params }: { params: { slug: string } }) => {
       </div>
     </>
   )
-}
 
-export default dynamic
+};
+
+export default BlogPage;
