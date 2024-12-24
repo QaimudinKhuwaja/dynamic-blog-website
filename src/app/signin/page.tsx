@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 
-export default function LoginPage() {
+export default function SigninPage() {
   return (
     <div className="flex items-center justify-center min-h-screen p-y-[20px] mt-[30px] mb-[30px]">
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
