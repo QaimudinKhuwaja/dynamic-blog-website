@@ -27,7 +27,7 @@ const deleteComment = (id: number)=>{
 
 
  return(
-    <div className='w-full max-w-3xl mx-auto p-6 bg-gray-50 rounded-lg shadow-lg border border-gray-300 mt-9'>
+    <div className='w-full max-w-3xl mx-auto p-6 bg-gray-50 rounded-lg shadow-lg border border-gray-300 mt-9 mb-11'>
         <h1 className='text-3xl font-semibold text-blue-950 mb-4 text-center'>Comment Section</h1>
       
           {/* comment input */}
